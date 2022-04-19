@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Alert } from "react-native";
+import { View } from "react-native";
+import Title from "./Title";
+import Buttons from "./Buttons";
 import Styles from "./Styles";
 
 export default function HomeData({ setScreen, getScreenInsert, getScreenList }) {
@@ -15,17 +17,8 @@ export default function HomeData({ setScreen, getScreenInsert, getScreenList }) 
 
     return (
         <View style={Styles.viewHome}>
-            <Text style={Styles.titleHome}>Menu</Text>
-            <View style={Styles.viewButtons}>
-                <TouchableOpacity style={Styles.insertButton}
-                    onPress={() => setScreenInsert()}>
-                    <Text style={Styles.insertButtonText}>Incluir</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={Styles.listButton}
-                    onPress={() => setScreenList()}>
-                    <Text style={Styles.listButtonText}>Listar</Text>
-                </TouchableOpacity>
-            </View>
+            <Title />
+            <Buttons setScreenInsert={setScreenInsert} setScreenList={setScreenList} />
         </View>
     );
 };

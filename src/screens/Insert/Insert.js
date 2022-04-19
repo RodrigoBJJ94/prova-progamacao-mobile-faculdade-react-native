@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
+import { View, Text, TextInput, Alert } from "react-native";
+import Title from "./Title";
+import Buttons from "./Buttons";
 import Styles from "./Styles";
 
 export default function Insert({ name, artist, album, year, setScreen,
@@ -22,7 +24,7 @@ export default function Insert({ name, artist, album, year, setScreen,
 
     return (
         <View style={Styles.viewInsert}>
-            <Text style={Styles.titleInsert}>Cadastro de Música</Text>
+            <Title />
             <Text style={Styles.textsInsert}>Nome da Música</Text>
             <TextInput style={Styles.inputInsert}
                 onChangeText={text => setName(text)} />
@@ -35,14 +37,8 @@ export default function Insert({ name, artist, album, year, setScreen,
             <Text style={Styles.textsInsert}>Ano</Text>
             <TextInput style={Styles.inputInsert}
                 onChangeText={text => setYear(text)} />
-            <TouchableOpacity style={Styles.buttonInsert}
-                onPress={() => insertScreenHome()}>
-                <Text style={Styles.buttonTextInsert}>Concluir</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={Styles.buttonCancel}
-                onPress={() => cancelInsertMusic()}>
-                <Text style={Styles.buttonTextCancel}>Cancelar</Text>
-            </TouchableOpacity>
+            <Buttons insertScreenHome={insertScreenHome}
+                cancelInsertMusic={cancelInsertMusic} />
         </View>
     );
 };
