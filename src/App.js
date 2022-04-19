@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StatusBar } from "react-native";
-import Home from "./screens/Home/Home";
+import Home from "./screens/Home/Home/Home";
 import Styles from "./Styles";
 
 export default function App() {

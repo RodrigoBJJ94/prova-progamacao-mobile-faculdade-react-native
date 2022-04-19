@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TextInput, Alert } from "react-native";
-import Title from "./Title";
-import Buttons from "./Buttons";
+import Title from "../Title/Title";
+import Buttons from "../Buttons/Buttons";
 import Styles from "./Styles";
 
 export default function Insert({ name, artist, album, year, setScreen,

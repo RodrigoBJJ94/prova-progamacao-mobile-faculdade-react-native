@@ -1,18 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    viewHome: {
-        flex: 1,
-        backgroundColor: "#ffffff",
-    },
-    titleHome: {
-        color: "#000000",
-        fontSize: 60,
-        fontWeight: "bold",
-        textAlign: "center",
-        marginTop: 120,
-        marginBottom: 150,
-    },
     viewButtons: {
         alignItems: "center",
     },

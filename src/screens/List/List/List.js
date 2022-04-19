@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
-import EmptyList from "./EmptyList";
-import Buttons from "./Buttons";
+import Title from "../Title/Title";
+import Buttons from "../Buttons/Buttons";
+import EmptyList from "../EmptyList/EmptyList";
 import Styles from "./Styles";
 
 export default function List({ name, artist, album, year, setScreen,
@@ -21,7 +22,7 @@ export default function List({ name, artist, album, year, setScreen,
     if (name !== "" || artist !== "" || album !== "" || year !== "") {
         return (
             <View style={Styles.viewList}>
-                <Text style={Styles.titleList}>Lista das Músicas</Text>
+                <Title />
                 <Text style={Styles.nameMusicList}>Nome da Música: {name}</Text>
                 <Text style={Styles.musicList}>Artista: {artist}</Text>
                 <Text style={Styles.musicList}>Álbum: {album}</Text>

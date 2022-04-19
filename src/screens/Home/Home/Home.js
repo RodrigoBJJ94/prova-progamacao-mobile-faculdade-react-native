@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import HomeData from "./HomeData";
-import Insert from "../Insert/Insert";
-import List from "../List/List";
+import HomeData from "../HomeData/HomeData";
+import Insert from "../../Insert/Insert/Insert";
+import List from "../../List/List/List";
 
 export default function Home() {
     const [screen, setScreen] = useState("Home");
